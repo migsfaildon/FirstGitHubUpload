@@ -27,6 +27,10 @@ Partial Class Form1
         ColorDialog1 = New ColorDialog()
         ComboBox1 = New ComboBox()
         ComboBox2 = New ComboBox()
+        Button3 = New Button()
+        FileSystemWatcher1 = New IO.FileSystemWatcher()
+        GroupBox1 = New GroupBox()
+        CType(FileSystemWatcher1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Button1
@@ -63,17 +67,43 @@ Partial Class Form1
         ComboBox2.Size = New Size(151, 28)
         ComboBox2.TabIndex = 3
         ' 
+        ' Button3
+        ' 
+        Button3.Location = New Point(460, 291)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(94, 29)
+        Button3.TabIndex = 4
+        Button3.Text = "Button3"
+        Button3.UseVisualStyleBackColor = True
+        ' 
+        ' FileSystemWatcher1
+        ' 
+        FileSystemWatcher1.EnableRaisingEvents = True
+        FileSystemWatcher1.SynchronizingObject = Me
+        ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.Location = New Point(93, 280)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Size = New Size(250, 125)
+        GroupBox1.TabIndex = 5
+        GroupBox1.TabStop = False
+        GroupBox1.Text = "GroupBox1"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(GroupBox1)
+        Controls.Add(Button3)
         Controls.Add(ComboBox2)
         Controls.Add(ComboBox1)
         Controls.Add(Button2)
         Controls.Add(Button1)
         Name = "Form1"
         Text = "Form1"
+        CType(FileSystemWatcher1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -82,5 +112,8 @@ Partial Class Form1
     Friend WithEvents ColorDialog1 As ColorDialog
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents FileSystemWatcher1 As IO.FileSystemWatcher
+    Friend WithEvents GroupBox1 As GroupBox
 
 End Class
