@@ -24,6 +24,9 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Button1 = New Button()
         Button2 = New Button()
+        ColorDialog1 = New ColorDialog()
+        ComboBox1 = New ComboBox()
+        ComboBox2 = New ComboBox()
         SuspendLayout()
         ' 
         ' Button1
@@ -44,11 +47,29 @@ Partial Class Form1
         Button2.Text = "Button2"
         Button2.UseVisualStyleBackColor = True
         ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(93, 228)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(151, 28)
+        ComboBox1.TabIndex = 2
+        ' 
+        ' ComboBox2
+        ' 
+        ComboBox2.FormattingEnabled = True
+        ComboBox2.Location = New Point(84, 151)
+        ComboBox2.Name = "ComboBox2"
+        ComboBox2.Size = New Size(151, 28)
+        ComboBox2.TabIndex = 3
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(ComboBox2)
+        Controls.Add(ComboBox1)
         Controls.Add(Button2)
         Controls.Add(Button1)
         Name = "Form1"
@@ -58,5 +79,8 @@ Partial Class Form1
 
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents ColorDialog1 As ColorDialog
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBox2 As ComboBox
 
 End Class
